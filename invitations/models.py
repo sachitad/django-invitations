@@ -18,7 +18,7 @@ from . import signals
 @python_2_unicode_compatible
 class Invitation(models.Model):
 
-    email = models.EmailField(unique=True, verbose_name=_('e-mail address'))
+    email = models.EmailField(verbose_name=_('e-mail address'))
     accepted = models.BooleanField(verbose_name=_('accepted'), default=False)
     created = models.DateTimeField(verbose_name=_('created'),
                                    default=timezone.now)
